@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="style.css">
 
-    <title>Tribute Page</title>
+    <title>Survey Form</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-light mybg-light">
         <div class="container">
             <!-- <span id="title" class="navbar-brand mb-0 h1 mx-auto">Tribute Page</span><br> -->
-            <span class="navbar-brand mb-0 h1 ">Tribute Page</span>
+            <span class="navbar-brand mb-0 h1 ">Survey Form</span>
         </div>
     </nav>
 
@@ -29,80 +29,126 @@
     <div id="main">
         <div class="container">
             <div class="row">
-                <div class="desc col-10">
-                    <h1 id="title" class="mb-5"> Dr.Norman Borlaug</h1>
-                    <figure id="img-div">
-                        <img src="https://www.pbs.org/wgbh/americanexperience/media/filer_public_thumbnails/filer_public/56/7c/567c2141-1572-4455-9078-3ddc8609e127/borlaug-article-1.jpg__1000x567_q85_crop_subsampling-2.jpg"
-                            class="figure-img img-myfluid rounded" alt="..." id="image">
-                        <figcaption class="figure-caption" id="img-caption">Dr. Norman Borlaug, third from the left, trains biologists in Mexico on how to increase wheat yields - part of his life-long war on hunger.
-                        </figcaption>
-                    </figure>
+                <div class="col text-center">
+                    <h1 id="title" class="mb-3 mx-auto">Survey Form</h1>
+                    <p id="description">Thank you for taking the time to help us improve the platform</p>
                 </div>
+                <form id="survey-form">
+                    <div class="mb-3">
+                      <label id="name-label" for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Enter your name" aria-describedby="nameHelp" required>
+                      <div id="nameHelp" class="form-text">We'll never share your name with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label id="email-label" for="email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email" aria-describedby="emailHelp" required>
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                      <label id="number-label" for="number" class="form-label">Age</label>
+                      <input type="number" min="10" max="99" class="form-control" id="number" placeholder="Enter your age" required>
+                    </div>
+                    <div class="mb-3">
+                    <label for="" class="form-label">Which option best describes your current role?</label>
+                    <select id="dropdown" class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">Student</option>
+                        <option value="2">Full Time Job</option>
+                        <option value="3">Full Time Learner</option>
+                        <option value="4">Prefer not to say</option>
+                        <option value="5">Other</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="" class="form-label">Would you recommend freeCodeCamp to a friend?</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="user-recomended" id="Definitely" value="Definitely" checked>
+                        <label class="form-check-label" for="Definitely">
+                            Definitely
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="user-recomended" id="Maybe" value="maybe">
+                        <label class="form-check-label" for="Maybe">
+                            Maybe
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="user-recomended" id="Not sure" value="Not sure">
+                        <label class="form-check-label" for="Not sure">
+                            Not sure
+                        </label>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">What would you like to see improved? <span class="clue">(Check all that apply</span>)</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Front-end-Projects" id="">
+                            <label class="form-check-label" for="Front-end-Projects">
+                                Front-end Projects
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Back-end-Projects" id="Back-end-Projects" >
+                            <label class="form-check-label" for="Back-end-Projects">
+                                Back-end Projects
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Data-Visualization" id="Data-Visualization" >
+                            <label class="form-check-label" for="Data-Visualization">
+                                Data Visualization
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Challenges" id="Challenges" >
+                            <label class="form-check-label" for="Challenges">
+                                Challenges
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Open-Source-Community" id="Open-Source-Community" >
+                            <label class="form-check-label" for="Open-Source-Community">
+                                Open Source Community
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Gitter-help-rooms" id="Gitter-help-rooms" >
+                            <label class="form-check-label" for="Gitter-help-rooms">
+                                Gitter help rooms
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Videos" id="Videos" >
+                            <label class="form-check-label" for="Videos">
+                                Videos
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Wiki" id="Wiki" >
+                            <label class="form-check-label" for="Wiki">
+                                Wiki
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Forum" id="Forum" >
+                            <label class="form-check-label" for="Forum">
+                                Forum
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Additional-Courses" id="Additional-Courses" >
+                            <label class="form-check-label" for="Additional-Courses">
+                                Additional Courses
+                            </label>
+                          </div>
+                    </div>
+                    <div class="mb-3">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                  </form>
             </div>
-
-            <section id="tribute-info">
-                <div class=" justify-content-center">
-                    <div class="">
-
-                        <h3 id="headline">The man who saved a billion lives</h3>
-                        <ul class="text-justify">
-                    <li>
-                        <strong>1914</strong> - Born in Cresco, Iowa
-                    </li>
-                    <li>
-                        <strong>1933</strong> - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"
-                    </li>
-                    <li>
-                        <strong>1935</strong> - Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."
-                    </li>
-                    <li>
-                        <strong>1937</strong> - Finishes university and takes a job in the US Forestry Service
-                    </li>
-                    <li>
-                        <strong>1938</strong> - Marries wife of 69 years Margret Gibson. Gets laid off due to budget cuts. Inspired by Elvin Charles Stakman, he returns to school study under Stakman, who teaches him about breeding pest-resistent plants.
-                    </li>
-                    <li>
-                        <strong>1941</strong> - Tries to enroll in the military after the Pearl Harbor attack, but is rejected. Instead, the military asked his lab to work on waterproof glue, DDT to control malaria, disinfectants, and other applied science.
-                    </li>
-                    <li>
-                        <strong>1942</strong> - Receives a Ph.D. in Genetics and Plant Pathology
-                    </li>
-                    <li>
-                        <strong>1944</strong> -- Rejects a 100% salary increase from Dupont, leaves behind his pregnant wife, and flies to Mexico to head a new plant pathology program. Over the next 16 years, his team breeds 6,000 different strains of disease resistent wheat - including different varieties for each major climate on Earth.
-                    </li>
-                    <li>
-                        <strong>1945</strong> - Discovers a way to grown wheat twice each season, doubling wheat yields
-                    </li>
-                    <li>
-                        <strong>1953</strong> - crosses a short, sturdy dwarf breed of wheat with a high-yeidling American breed, creating a strain that responds well to fertilizer. It goes on to provide 95% of Mexico's wheat.
-                    </li>
-                    <li>
-                        <strong>1962</strong> - Visits Delhi and brings his high-yielding strains of wheat to the Indian subcontinent in time to help mitigate mass starvation due to a rapidly expanding population
-                    </li>
-                    <li>
-                        <strong>1970</strong> - receives the Nobel Peace Prize
-                    </li>
-                    <li>
-                        <strong>1983</strong> - helps seven African countries dramatically increase their maize and sorghum yields
-                    </li>
-                    <li>
-                        <strong>1984</strong> - becomes a distinguished professor at Texas A&M University
-                    </li>
-                    <li>
-                        <strong>2005</strong> - states "we will have to double the world food supply by 2050." Argues that genetically modified crops are the only way we can meet the demand, as we run out of arable land. Says that GM crops are not inherently dangerous because "we've been genetically modifying plants and animals for a long time. Long before we called it science, people were selecting the best breeds."
-                    </li>
-                     <li>
-                         <strong>2009</strong> - dies at the age of 95.
-                        </li>
-                    </ul>
-                    <blockquote>
-                        <p>"Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</p>
-                        <cite>-- Indian Prime Minister Manmohan Singh</cite>
-                    </blockquote>
-                    <h3>If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Wikipedia entry</a></h3>
-                </div>
-                </div>
-            </section>
         </div>
     </div>
     
@@ -111,7 +157,7 @@
         <div class="container">
           <a class="navbar-brand mx-auto" href="#">Created by Ihsan Maulana 2021</a>
         </div>
-      </nav>
+    </nav>
     
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
